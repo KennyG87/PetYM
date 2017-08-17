@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    >
+<android.support.constraint.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgcolor"
+    android:paddingBottom="20dp"
+    android:windowSoftInputMode="adjustPan|adjustResize">
+
+
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:text="約會日期"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="13dp"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="請選擇"
+            android:textColor="#e0dada"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="60dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/sellerPeopleCT"
+            android:layout_marginTop="35dp" />
+
+        <Button
+            android:id="@+id/datebutton"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/calendar"
+
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sellerPeopleCT"
+            android:layout_marginTop="25dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp" />
+        <!--android:onClick="onDateClick"-->
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:text="上架"
+            android:background="#9aa5b0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/uploadDateItem"
+            android:layout_marginTop="799dp"
+            app:layout_constraintHorizontal_bias="0.6"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" />
+
+        <Button
+            android:id="@+id/btTakePicture"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivMemImg"
+            android:layout_toRightOf="@+id/ivMemImg"
+            android:background="#494e70"
+            android:onClick="onPickPictureClick"
+            android:text="@string/btChoose"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="196dp"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/btTakePicture1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btTakePicture"
+            android:layout_alignBottom="@+id/btTakePicture"
+            android:background="#494e70"
+            android:textColor="#ffffff"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@+id/btTakePicture"
+            android:layout_toRightOf="@+id/btTakePicture"
+            android:onClick="onTakePictureClick"
+            android:text="@string/btTakePicture"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="26dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.248"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="196dp"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/uploadDateItem"
+            android:layout_width="368dp"
+            android:layout_height="181dp"
+            app:srcCompat="@drawable/default_image"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/uploadDateItem"
+            android:layout_marginTop="250dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/textInputLayout1">
+
+            <EditText
+        android:id="@+id/itemtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:hint="標題"
+        android:inputType="text"
+        android:textColor="@color/radioCheckedColor"
+        app:errorEnabled="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:id="@+id/textInputLayout2"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+
+            <EditText
+        android:id="@+id/itemprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:hint="約會價格"
+        android:inputType="text"
+        android:textColor="@color/radioCheckedColor"
+        app:errorEnabled="true" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="選擇寵物"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:id="@+id/textInputLayout3"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+
+        />
+        <Spinner
+            android:id="@+id/spPet"
+            android:layout_width="258dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+
+            app:layout_constraintRight_toRightOf="@+id/textInputLayout3"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="385dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="選擇餐廳"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:id="@+id/textInputLayout4"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+
+        />
+        <Spinner
+            android:id="@+id/spRestuarant"
+            android:layout_width="258dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/spPet"
+            android:layout_marginTop="34dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="買方人數"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:id="@+id/textInputLayout5"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+
+        />
+        <Spinner
+            android:id="@+id/spBuyerPeopleCt"
+            android:layout_width="258dp"
+            android:layout_height="20dp"
+            android:entries="@array/spBuyerPeopleCt"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/spRestuarant"
+            android:layout_marginTop="33dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="賣方人數"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:id="@+id/textInputLayout6"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+
+        />
+        <Spinner
+            android:id="@+id/sellerPeopleCT"
+            android:layout_width="258dp"
+            android:layout_height="20dp"
+            android:entries="@array/sellerPeopleCT"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/spBuyerPeopleCt"
+            android:layout_marginTop="34dp" />
+
+
+
+        <RadioGroup
+            android:layout_width="180dp"
+            android:layout_height="47dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="196dp"
+            android:layout_marginLeft="188dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:weightSum="1"
+            android:id="@+id/selectDateGroup"
+            android:layout_marginStart="188dp">
+
+                <RadioButton
+                    android:id="@+id/commonDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="一般約會"
+                    android:hint="0"
+                    android:layout_weight="0.5"
+                    android:checked="true"
+                     />
+
+                <RadioButton
+                    android:id="@+id/speedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="即時約會"
+                    android:hint="1"
+                    android:layout_weight="0.5"/>
+
+        </RadioGroup>
+        <android.support.design.widget.TextInputLayout
+
+            android:id="@+id/shipper_layout"
+            android:layout_width="360dp"
+            android:layout_height="223dp"
+            android:layout_marginEnd="8dp"
+
+
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="80dp">
+                <EditText
+                    android:id="@+id/memSelfintro"
+                    android:layout_width="360dp"
+                    android:layout_height="223dp"
+                    android:gravity="top"
+                    android:hint="商品簡介"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:paddingLeft="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="70dp"
+                     />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/setFakeData"
+            android:layout_width="44dp"
+            android:layout_height="43dp"
+            android:text="O"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="-11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="55dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/uploadButton"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

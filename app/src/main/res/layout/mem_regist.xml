@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bgcolor"
+    android:isScrollContainer="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivMemImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:src="@drawable/memimg" />
+            <Button
+                android:id="@+id/btTakePicture"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onPickPictureClick"
+                android:text="@string/btChoose"
+                android:background="#08AE9E"
+                android:layout_alignBottom="@+id/ivMemImg"
+                android:layout_toRightOf="@+id/TextView123"
+                android:layout_toEndOf="@+id/TextView123" />
+            <Button
+                android:id="@+id/btTakePicture1"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onTakePictureClick"
+                android:text="@string/btTakePicture"
+
+                android:layout_alignBaseline="@+id/btTakePicture"
+                android:layout_alignBottom="@+id/btTakePicture"
+                android:layout_toRightOf="@+id/btTakePicture"
+                android:layout_toEndOf="@+id/btTakePicture"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp" />
+
+            <TextView
+                android:id="@+id/TextView123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/ivMemImg"
+                android:layout_above="@+id/btTakePicture" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/btTakePicture1"
+                android:layout_marginLeft="312dp"
+                android:layout_marginStart="312dp"
+                android:onClick="setAllfill"
+                android:text="B"
+                android:layout_alignBottom="@+id/btTakePicture1" />
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/memGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="性別"
+                android:textAlignment="textStart"
+                android:textSize="19sp" />
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="44dp"
+                android:checked="true"
+                android:hint="0"
+                android:paddingRight="20dp"
+                android:text="男"
+                android:textColor="@color/radioCheckedColor" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="女"
+                android:hint="1"
+                android:textColor="@color/radioCheckedColor" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/petornot">
+
+            <TextView
+                android:id="@+id/tvpetornot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:text="有無寵物"
+                android:textAlignment="textStart"
+                android:textSize="19sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <RadioButton
+                android:id="@+id/donthavePet"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/text_donthavePet"
+                android:hint="0"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/radioCheckedColor"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/havePet"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/text_havePet"
+                android:hint="1"
+                android:textColor="@color/radioCheckedColor"
+                 />
+
+        </RadioGroup>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/memId"
+                app:errorEnabled="true"
+                android:inputType="text"
+                android:textColor="@color/radioCheckedColor" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memPwd"
+                android:inputType="textPassword"
+                android:textColor="@color/radioCheckedColor"
+                app:errorEnabled="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memName"
+                android:inputType="textPersonName"
+                android:textColor="@color/radioCheckedColor"
+                app:errorEnabled="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memSname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memSname"
+                android:inputType="textPersonName"
+                android:textColor="@color/radioCheckedColor"
+                app:errorEnabled="true" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memIdNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memIdNo"
+                app:errorEnabled="true"
+                android:inputType="text"
+                android:textColor="@color/radioCheckedColor" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/memBday1"
+                android:layout_width="70dp"
+                android:layout_height="47dp"
+                android:gravity="center"
+
+                android:hint="@string/text_memBday"
+                android:paddingLeft="10dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/radioCheckedColor"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/memBday" />
+
+            <TextView
+                android:id="@+id/memBday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_toEndOf="@+id/memBday1"
+                android:layout_toLeftOf="@+id/bdaybutton"
+                android:layout_toRightOf="@+id/memBday1"
+                android:gravity="center"
+                android:text="請選擇"
+                android:textAlignment="textStart"
+                android:textColor="#e0dada"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/bdaybutton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/calendar"
+                android:onClick="onDateClick"/>
+        </RelativeLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memPhone"
+                app:errorEnabled="true"
+                android:inputType="phone"
+                android:textColor="@color/radioCheckedColor"
+                android:layout_marginLeft="5dp" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memAddress"
+                app:errorEnabled="true"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/radioCheckedColor" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/memEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:hint="@string/text_memEmail"
+                app:errorEnabled="true"
+                android:inputType="textWebEmailAddress"
+                android:textColor="@color/radioCheckedColor"
+                android:layout_marginLeft="5dp" />
+        </android.support.design.widget.TextInputLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/memRelation">
+
+            <TextView
+                android:id="@+id/tvMemRelation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:text="感情"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <RadioButton
+                android:id="@+id/single"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="單身"
+                android:checked="true"
+                android:hint="0"
+                android:paddingRight="20dp"
+                android:textColor="@color/radioCheckedColor"
+                android:layout_marginLeft="5dp" />
+
+            <RadioButton
+                android:id="@+id/communication"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="穩定交往"
+                android:hint="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/radioCheckedColor"
+                android:layout_marginLeft="5dp" />
+            <RadioButton
+                android:id="@+id/notPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="不公開"
+                android:hint="2"
+                android:textColor="@color/radioCheckedColor" />
+        </RadioGroup>
+        <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/shipper_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/memSelfintro"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="top"
+                android:hint="自介"
+                app:errorEnabled="true"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <!--<Button-->
+                <!--android:id="@+id/btFinishInsert"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_toStartOf="@+id/btRegisterNextStep"-->
+                <!--android:onClick="onInsertClick"-->
+                <!--android:text="@string/text_Insert"-->
+                <!--android:layout_toLeftOf="@+id/btRegisterNextStep" />-->
+
+            <Button
+                android:id="@+id/btRegisterNextStep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onNextlClick"
+                android:text="@string/text_btonNextlClick"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+<!--<DatePicker-->
+<!--android:id="@+id/datePicker"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+<!--android:datePickerMode="spinner"-->
+<!--android:calendarViewShown="false" />-->

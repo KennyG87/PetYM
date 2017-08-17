@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">PetYM</string>
+    <string name="btTakePicture">照相</string>
+    <string name="memId">帳號</string>
+    <string name="text_memPwd">密碼</string>
+    <string name="text_memPhone">電話</string>
+    <string name="text_memName">姓名</string>
+    <string name="text_memIdNo">身分證字號</string>
+    <string name="text_memBday">生日</string>
+    <string name="text_memAddress">地址</string>
+    <string name="text_memEmail">Email</string>
+    <string name="text_Insert">註冊</string>
+    <string name="text_btCancel">取消</string>
+    <string name="text_Login">Login</string>
+    <string name="msg_NoNetwork">No network connection available</string>
+    <string name="text_memSname">暱稱</string>
+    <string name="text_memGender">性別</string>
+    <string name="text_memRelation">會員感情狀態</string>
+    <string name="text_male">男</string>
+    <string name="text_female">女</string>
+    <string name="text_single">單身</string>
+    <string name="text_communication">交往中</string>
+    <string name="text_notPublic">不公開</string>
+    <string name="text_btonNextlClick">註冊</string>
+    <string name="text_havePet">有</string>
+    <string name="text_donthavePet">無</string>
+    <string name="btChoose">選擇</string>
+    <string name="text_petmale">公</string>
+    <string name="text_petfemale">母</string>
+    <string name="text_petName">寵物姓名</string>
+    <string name="text_petKind">寵物類別</string>
+    <string name="text_petSpecies">寵物品種</string>
+    <string name="text_petBday">寵物生日</string>
+    <string name="text_dog">狗</string>
+    <string name="text_cat">貓</string>
+    <string name="text_OtherType">其他</string>
+    <string name="msg_NoCameraApp">No camera app found</string>
+    <string name="title">購買確認</string>
+    <string name="msg_Alert">確定要購買嗎?</string>
+    <string name="text_btYes">確定</string>
+    <string name="text_btNo">取消</string>
+    <string name="msg_NoOrderFound">NoOrderFound</string>
+    <string name="msg_InvalidUserOrPassword">密碼不正確</string>
+    <string-array name="food_array">
+        <item>spaghetti</item>
+        <item>dumpling</item>
+        <item>sushi</item>
+    </string-array>
+    <string-array name="spBuyerPeopleCt">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="sellerPeopleCT">
+        <item>無</item>
+        <item>有</item>
+
+    </string-array>
+</resources>

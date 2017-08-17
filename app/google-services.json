@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "353829435842",
+    "firebase_url": "https://petym-293b5.firebaseio.com",
+    "project_id": "petym-293b5",
+    "storage_bucket": "petym-293b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353829435842:android:928313282e7011f3",
+        "android_client_info": {
+          "package_name": "petym.android.com.petym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353829435842-u52kn2fl93d14pk4q26buaoerkpu5egh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADIYhqBN0YM0-WBf15ei76E88uQT9GReY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

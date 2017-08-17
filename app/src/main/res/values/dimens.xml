@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">4dp</dimen>
+    <dimen name="activity_vertical_margin">4dp</dimen>
+    <dimen name="abc_text_size_local_material">26sp</dimen>
+    <dimen name="detail_MS">3dp</dimen>
+    <dimen name="detail_MT">3dp</dimen>
+    <dimen name="detail_PF">50dp</dimen>
+</resources>
